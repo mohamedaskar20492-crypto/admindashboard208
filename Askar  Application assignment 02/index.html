@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanka Fresh Mart - Sales Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="#">
+               <img src="C:\Users\user\Desktop\Askar  Application assignment 02\logo.png.jpg" style="border: 5px solid black;"> 
+            
+            
+           <strong> <span class="brand-name">LANKA FRESH MART</span></strong>
+            </a>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> Sales</a></li>
+                <li><a href="#" class="nav-link"><i class="fa-solid fa-file-invoice-dollar"></i> Reports</a></li>
+               <h4> <li><a href="#" class="nav-link"><i class="fa-solid fa-gear"></i> Settings<b>
+                    <uli>
+                
+            
+             
+                    </b>
+    </uli>
+</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+        
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=2e7d32&color=fff" alt="User Avatar" class="avatar">
+                <span class="user-name">Admin</span>
+            </div>
+
+        
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    
+    <main class="dashboard-container">
+        <section class="dashboard-header">
+            <div>
+                <h1>Sales Performance Dashboard</h1>
+                <p>Welcome back! Here is your latest business summary.</p>
+            </div>
+        </section>
+
+        
+        <section class="kpi-grid">
+            <article class="kpi-card">
+                <div class="kpi-icon icon-revenue">
+                    <i class="https://freebiesupply.com/logos/sri-lanka-logo/"></i>
+                </div>
+                <div class="kpi-details">
+                    <span class="kpi-label">Total Revenue (H1)</span>
+                    <h3 class="kpi-value" id="kpi-revenue">LKR 0</h3>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-icon icon-units">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div class="kpi-details">
+                    <span class="kpi-label">Total Units Sold</span>
+                    <h3 class="kpi-value" id="kpi-units">0</h3>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-icon icon-month">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="kpi-details">
+                    <span class="kpi-label">Best Month</span>
+                    <h3 class="kpi-value" id="kpi-best-month">-</h3>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-icon icon-branch">
+                    <i class="fa-solid fa-shop"></i>
+                </div>
+                <div class="kpi-details">
+                    <span class="kpi-label">Best Branch (Q2)</span>
+                    <h3 class="kpi-value" id="kpi-best-branch">-</h3>
+                </div>
+            </article>
+        </section>
+
+    
+        <section class="charts-grid">
+            <article class="chart-card chart-line-area">
+                <div class="chart-header">
+                    <h2><i class="fa-solid fa-chart-line"></i> Monthly Revenue Trend (Jan - Jun)</h2>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="monthlyRevenueChart"></canvas>
+                </div>
+            </article>
+
+            <article class="chart-card chart-bar-area">
+                <div class="chart-header">
+                    <h2><i class="fa-solid fa-chart-column"></i> Q2 Revenue by Branch</h2>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="branchRevenueChart"></canvas>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Lanka Fresh Mart. All rights reserved.</p>
+    </footer>
+
+
+    <script src="java.js"></script>
+</body>
+</html>
